@@ -32,6 +32,6 @@ var https = reqs.https,
 
 ```js
 // New way 
-let {https, http} = require('reqqer')({https, http});
+const {https, http} = require('reqqer')({https, http});
 ```
 
