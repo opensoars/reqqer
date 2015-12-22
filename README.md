@@ -15,4 +15,7 @@ Requires made easy.
 
 ## Install
 
+`npm install reqqer`
+
 ## Use
+
