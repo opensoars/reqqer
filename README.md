@@ -19,3 +19,19 @@ Requires made easy.
 
 ## Use
 
+```js
+// Old way
+var reqs = require('reqqer')({
+  https: 'https',
+  http: 'http'
+});
+
+var https = reqs.https,
+    http = reqs.http;
+```
+
+```js
+// New way 
+let {https, http} = require('reqqer')({https, http});
+```
+
