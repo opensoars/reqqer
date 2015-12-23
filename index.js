@@ -7,6 +7,7 @@
 
 /**
  * Returns whether passed argument is an object or not.
+ * @private
  * @param {any} x - Gets checked for object data type
  * @return {bool} - Whether x is an object or not
  */
@@ -16,6 +17,7 @@ function isObj (x) {
 
 /**
  * Returns whether passed argument is an array or not.
+ * @private
  * @param {any} x - Gets checked for array data type
  * @return {bool} - Whether x is an array or not
  */
@@ -23,47 +25,13 @@ function isArr (x) {
   return x instanceof Array;
 }
 
+
 // Reqqer application logic
+var resFromReqObj = require('./lib/resFromReqObj'),
+    resFromReqArr = require('./lib/resFromReqArr');
 
-/**
- * ResulFromRequireObject.
- * @param {object} to_req - Which modules to require
- * @return {object} res - Results containing key value module pairs
- */
-function resFromReqObj (to_req) {
-  var res = {};
-  try {
-    for (var req in to_req) {
-      if (to_req.hasOwnProperty(req)) {
-        res[req] = require(to_req[req]); 
-      }
-    }
-  }
-  catch (err) {
-    throw new Error('resFromReqObj failed');
-  }
-  return res;
-}
 
-/**
- * ResulFromRequireArray.
- * @param {array} to_req - Which modules to require
- * @return {object} res - Results containing key value module pairs
- */
-function resFromReqArr (to_req) {
-  var res = {};
-  try {
-    to_req.forEach(function (req) {
-      res[req] = require(req);
-    });
-  }
-  catch (err) {
-    throw new Error(err);
-  }
-  return res;
-}
-
-// Reqqer abstract application flow
+// Reqqer abstracted application flow
 
 /**
  * Main exported function. Takes either an object or array of modules to
