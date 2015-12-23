@@ -3,6 +3,8 @@
  * @module reqqer
  */
 
+// Helpers
+
 /**
  * Returns whether passed argument is an object or not.
  * @param {any} x - Gets checked for object data type
@@ -20,6 +22,8 @@ function isObj (x) {
 function isArr (x) {
   return x instanceof Array;
 }
+
+// Reqqer application logic
 
 /**
  * ResulFromRequireObject.
@@ -59,6 +63,7 @@ function resFromReqArr (to_req) {
   return res;
 }
 
+// Reqqer abstract application flow
 
 /**
  * Main exported function. Takes either an object or array of modules to
