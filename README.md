@@ -19,8 +19,8 @@ Requires made easy.
 
 ## Use
 
+Old way
 ```js
-// Old way
 var reqs = require('reqqer')({
   https: 'https',
   http: 'http'
@@ -30,8 +30,8 @@ var https = reqs.https,
     http = reqs.http;
 ```
 
+New way
 ```js
-// New way 
 const {https, http} = require('reqqer')({https, http});
 ```
 
