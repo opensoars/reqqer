@@ -7,10 +7,12 @@ describe('resFromReqObj', function () {
     assert.equal(typeof resFromReqObj, 'function');
   });
 
-  try {
-    resFromReqObj([1, 2, 3]);
-  }
-  catch (e) {
-    console.log(e);
-  }
+  it('throws when it\'s passed an object with values of not type string', function (done) {
+    try {
+      resFromReqObj({ test: 123 });
+    }
+    catch (err) {
+      done();
+    }
+  });
 });
