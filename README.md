@@ -41,3 +41,9 @@ const {https, http} = require('reqqer')({https, http});
 
 1. `npm run doc`
 2. Open `doc/jsdoc/index.html`
+
+
+## Tests and code coverage
+
+1. `npm run local_test`
+2. Open `coverage/lcov-report/index.html`
