@@ -17,6 +17,7 @@ Requires made easy.
 
 `npm install reqqer`
 
+
 ## Use
 
 Old way
@@ -35,3 +36,8 @@ New way
 const {https, http} = require('reqqer')({https, http});
 ```
 
+
+## Documentation
+
+1. `npm run doc`
+2. Open `doc/jsdoc/index.html`
