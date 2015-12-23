@@ -4,17 +4,29 @@
  */
 
 /**
- * @param {any} x - Gets check for object data type
+ * Returns whether passed argument is an object or not.
+ * @param {any} x - Gets checked for object data type
+ * @return {bool} - Whether x is an object or not
  */
 function isObj (x) {
   return typeof x === 'object' && !(x instanceof Array);
 }
 
+/**
+ * Returns whether passed argument is an array or not.
+ * @param {any} x - Gets checked for array data type
+ * @return {bool} - Whether x is an array or not
+ */
 function isArr (x) {
   return x instanceof Array;
 }
 
-function resFromObj (to_req ) {
+/**
+ * ResulFromRequireObject.
+ * @param {object} to_req - Which modules to require
+ * @return {object} res - Results containing key value module pairs
+ */
+function resFromReqObj (to_req) {
   var res = {};
   try {
     for (var req in to_req) {
@@ -25,12 +37,17 @@ function resFromObj (to_req ) {
   }
   catch (err) {
     console.log(err);
-    throw new Error('resFromObj failed');
+    throw new Error('resFromReqObj failed');
   }
   return res;
 }
 
-function resFromArr (to_req) {
+/**
+ * ResulFromRequireArray.
+ * @param {array} to_req - Which modules to require
+ * @return {object} res - Results containing key value module pairs
+ */
+function resFromReqArr (to_req) {
   var res = {};
   try {
     to_req.forEach(function (req) {
@@ -45,16 +62,18 @@ function resFromArr (to_req) {
 
 
 /**
+ * Main exported function. Takes either an object or array of modules to
+ * require, else throw error.
  * @param {object} to_req - Key value pairs of what to `require`
  */
 function reqqer (to_req) {
   var res;
 
   if (isObj(to_req)) {
-    res = resFromObj(to_req);
+    res = resFromReqObj(to_req);
   }
   else if (isArr(to_req)) {
-    res = resFromArr(to_req);
+    res = resFromReqArr(to_req);
   }
   else {
     throw new Error('Expected either an array or object as 1st agument');
@@ -64,8 +83,3 @@ function reqqer (to_req) {
 }
 
 module.exports = reqqer;
-
-
-var t = reqqer(['asd']);
-
-console.log(typeof t);
