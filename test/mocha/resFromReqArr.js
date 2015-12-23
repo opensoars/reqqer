@@ -22,4 +22,14 @@ describe('resFromReqArr', function () {
       done();
     }
   });
+
+  it('throws when it\'s passed an array with non existing module names as elements', function (done) {
+    try {
+      resFromReqArr(['test123']);
+    }
+    catch (err) {
+      console.log(err);
+      done();
+    }
+  });
 });

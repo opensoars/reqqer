@@ -7,7 +7,7 @@ describe('resFromReqObj', function () {
     assert.equal(typeof resFromReqObj, 'function');
   });
 
-  it('returns an object containing key value module pairs according to object key value pairs', function () {
+  it('returns an object containing key value module pairs according to passed object key value pairs', function () {
     var res = resFromReqObj({
       http_test: 'http',
       https_test: 'https'
@@ -25,4 +25,14 @@ describe('resFromReqObj', function () {
       done();
     }
   });
+
+  it('throws when it\'s passed an object with non existing module names as values', function (done) {
+    try {
+      resFromReqObj({ test123: 'test123' });
+    }
+    catch (err) {
+      done();
+    }
+  })
+
 });
