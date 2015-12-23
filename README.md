@@ -47,3 +47,10 @@ const {https, http} = require('reqqer')({https, http});
 
 1. `npm run local_test`
 2. Open `coverage/lcov-report/index.html`
+
+
+## Development
+
+1. `git clone https://github.com/opensoars/reqqer`
+2. `cd reqqer`
+3. `npm install`
