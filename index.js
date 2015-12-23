@@ -36,7 +36,6 @@ function resFromReqObj (to_req) {
     }
   }
   catch (err) {
-    console.log(err);
     throw new Error('resFromReqObj failed');
   }
   return res;
