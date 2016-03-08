@@ -20,7 +20,7 @@ Requires made easy.
 
 ## Use
 
-Old way
+ES 2015
 ```js
 var reqs = require('reqqer')({
   https: 'https',
@@ -31,7 +31,7 @@ var https = reqs.https,
     http = reqs.http;
 ```
 
-New way
+ES 2016
 ```js
 const {https, http} = require('reqqer')({https, http});
 ```
