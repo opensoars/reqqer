@@ -24,4 +24,16 @@ describe('using the module', function () {
       assert.equal(typeof reqs.http, 'object');
     });
   });
+
+
+  describe('passing it something other than an array or object', function () {
+    it('returns an object with modules', function (done) {
+      try {
+        reqqer('123');
+      }
+      catch (e) {
+        done();
+      }
+    });
+  });
 });
