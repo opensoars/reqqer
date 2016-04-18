@@ -33,7 +33,7 @@ var https = reqs.https,
 
 ES 2016
 ```js
-const {https, http} = require('reqqer')({https, http});
+const {https, http} = require('reqqer')(['https', 'http']);
 ```
 
 
