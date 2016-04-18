@@ -22,10 +22,14 @@ Requires made easy.
 
 ES 2015
 ```js
+// Using an object
 var reqs = require('reqqer')({
   https: 'https',
   http: 'http'
 });
+
+// Using an array
+var reqs = require('reqqer')(['https', 'http']);
 
 var https = reqs.https,
     http = reqs.http;
@@ -33,6 +37,13 @@ var https = reqs.https,
 
 ES 2016
 ```js
+// Using an object
+const {https, http} = require('reqqer')({
+  https: 'https',
+  http: 'http'
+});
+
+// Using an array
 const {https, http} = require('reqqer')(['https', 'http']);
 ```
 
