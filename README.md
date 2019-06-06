@@ -7,7 +7,9 @@ Requires made easy.
 [![Inline docs](http://inch-ci.org/github/opensoars/reqqer.svg?branch=master&bust=1)](http://inch-ci.org/github/opensoars/reqqer)
 [![Codacy Badge](https://api.codacy.com/project/badge/f3e64501763645b9aa483bf83a4dd1d5)](https://www.codacy.com/app/sam_1700/reqqer)
 [![Code Climate](https://codeclimate.com/github/opensoars/reqqer/badges/gpa.svg)](https://codeclimate.com/github/opensoars/reqqer)
+
 [![dependencies Status](https://david-dm.org/opensoars/reqqer/status.svg)](https://david-dm.org/opensoars/reqqer)
+[![devDependencies Status](https://david-dm.org/opensoars/reqqer/dev-status.svg)](https://david-dm.org/opensoars/reqqer?type=dev)
 
 ---
 
